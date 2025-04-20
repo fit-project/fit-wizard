@@ -497,7 +497,7 @@ resolved_reference = "f19d341e0eb8db3bfa42d2c944e4e3af6ed81449"
 
 [[package]]
 name = "fit-configurations"
-version = "1.0.5"
+version = "1.0.6"
 description = "This module provides the graphical interface for configuring settings used by the FIT application."
 optional = false
 python-versions = ">=3.9,<3.13"
@@ -515,7 +515,7 @@ sqlalchemy = "^2.0.40"
 type = "git"
 url = "https://github.com/fit-project/fit-configurations.git"
 reference = "main"
-resolved_reference = "68ed72707a56403d28b159fa5c02a202f156b83f"
+resolved_reference = "8df7206e4c31beeb3d69cec990cffeada2f1bfee"
 
 [[package]]
 name = "fit-verify-pdf-timestamp"

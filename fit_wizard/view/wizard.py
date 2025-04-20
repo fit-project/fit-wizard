@@ -22,7 +22,7 @@ from fit_verify_pdf_timestamp.view.verify_pdf_timestamp import (
 from fit_configurations.utils import show_configuration_dialog
 from fit_cases.utils import show_case_info_dialog
 
-from fit_common.core.utils import resolve_path, get_version
+from fit_common.core.utils import get_version
 
 from fit_wizard.lang import load_translations
 
@@ -34,7 +34,7 @@ from fit_assets import resources
 
 
 class Wizard(QtWidgets.QMainWindow):
-    finished = QtCore.pyqtSignal(str, dict)
+    finished = QtCore.Signal(str, dict)
 
     def __init__(self, parent=None):
         super(Wizard, self).__init__(parent)
@@ -87,11 +87,11 @@ class Wizard(QtWidgets.QMainWindow):
         self.ui.version.setText(get_version())
 
         # PAGE1 CASE INFO FORM
-        self.form_manager = CaseFormManager(self.form)
+        self.form_manager = CaseFormManager(self.ui.form)
         self.form_manager.name.currentTextChanged.connect(self.__enable_next_button)
 
         # PAGE2 SELECT TASK
-        self.tasks = self.ui.findChildren(QtWidgets.QCheckBox)
+        self.tasks = self.ui.tasks_page.findChildren(QtWidgets.QCheckBox)
 
         for task in self.tasks:
             task.setAttribute(QtCore.Qt.WidgetAttribute.WA_MacShowFocusRect, 0)

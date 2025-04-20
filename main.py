@@ -10,12 +10,18 @@
 from PySide6.QtWidgets import QApplication
 import sys
 
-from fit_verify_pec.view.verify_pec import VerifyPec
+from fit_wizard.view.wizard import Wizard
 
 
 def main():
+    def start_task(task, case_info):
+        print(f"task: {task}")
+        print(f"case_info: {case_info}")
+        window.close()
+
     app = QApplication(sys.argv)
-    window = VerifyPec()
+    window = Wizard()
+    window.finished.connect(lambda task, case_info: start_task(task, case_info))
     window.show()
     sys.exit(app.exec())
 
