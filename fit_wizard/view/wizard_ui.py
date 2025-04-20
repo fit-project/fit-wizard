@@ -9,7 +9,7 @@
 
 from PySide6 import QtCore, QtGui, QtWidgets
 
-from fit_cases.lang import load_translations
+from fit_wizard.lang import load_translations
 from fit_common.core.utils import get_version
 
 
@@ -903,32 +903,33 @@ class Ui_fit_wizard(object):
         QtCore.QMetaObject.connectSlotsByName(fit_wizard)
 
     def retranslateUi(self, fit_wizard):
-        _translate = QtCore.QCoreApplication.translate
-        fit_wizard.setWindowTitle(_translate("fit_wizard", "FIT Wizard"))
-        self.title_right_info.setText(
-            _translate("fit_wizard", "Freezing Internet Tool")
-        )
+
+        fit_wizard.setWindowTitle("FIT Wizard")
+        self.translations = load_translations()
+        self.title_right_info.setText(self.translations["TITLE_RIGHT_INFO"])
         self.verify_timestamp_button.setToolTip(
-            _translate("fit_wizard", "Verify timestamp")
+            self.translations["VERIFY_TIMESTAMP_BUTTON"]
         )
-        self.verify_pec_button.setToolTip(_translate("fit_wizard", "Verify PEC"))
-        self.configuration_button.setToolTip(_translate("fit_wizard", "Configuration"))
-        self.lawyer_name.setPlaceholderText(_translate("fit_wizard", "Laywer"))
-        self.operator.setPlaceholderText(_translate("fit_wizard", "Operator"))
-        self.courthouse.setPlaceholderText(_translate("fit_wizard", "Courthouse"))
+        self.verify_pec_button.setToolTip(self.translations["VERIFY_PEC_BUTTON"])
+        self.configuration_button.setToolTip(self.translations["cONFIGURATION_BUTTON"])
+
+        self.lawyer_name.setPlaceholderText(self.translations["LAWYER"])
+        self.operator.setPlaceholderText(self.translations["OPERATOR"])
+        self.courthouse.setPlaceholderText(self.translations["COURTHOUSE"])
         self.proceeding_number.setPlaceholderText(
-            _translate("fit_wizard", "Proceeding number")
+            self.translations["PROCEEDING_NUMBER"]
         )
-        self.logo.setPlaceholderText(_translate("fit_wizard", "Select logo"))
-        self.logo_button.setText(_translate("fit_wizard", "Open"))
-        self.notes.setPlaceholderText(_translate("fit_wizard", "Notes"))
-        self.web.setText(_translate("fit_wizard", "WEB"))
-        self.mail.setText(_translate("fit_wizard", "MAIL"))
-        self.instagram.setText(_translate("fit_wizard", "INSTAGRAM"))
-        self.video.setText(_translate("fit_wizard", "VIDEO"))
-        self.entire_website.setText(_translate("fit_wizard", "ENTIRE WEBSITE"))
-        self.case_summary_button.setText(_translate("fit_wizard", "Case summary"))
-        self.back_button.setText(_translate("fit_wizard", "< Back"))
-        self.next_button.setText(_translate("fit_wizard", "Next >"))
-        self.credits_label.setText(_translate("fit_wizard", "By: fit-project.org"))
-        self.version.setText(_translate("fit_wizard", "v1.0.3"))
+        self.logo.setPlaceholderText(self.translations["LOGO"])
+        self.logo_button.setText(self.translations["LOGO_BUTTON"])
+        self.notes.setPlaceholderText(self.translations["NOTES"])
+
+        self.web.setText(self.translations["TASK_WEB"])
+        self.mail.setText(self.translations["TASK_MAIL"])
+        self.instagram.setText(self.translations["TASK_INSTAGRAM"])
+        self.video.setText(self.translations["TASK_VIDEO"])
+        self.entire_website.setText(self.translations["TASK_ENTIRE_WEBSITE"])
+        self.case_summary_button.setText(self.translations["CASE_SUMMARY"])
+        self.back_button.setText(self.translations["BACK_BUTTON"])
+        self.next_button.setText(self.translations["NEXT_BUTTON"])
+        self.credits_label.setText("By: fit-project.org")
+        self.version.setText(get_version())

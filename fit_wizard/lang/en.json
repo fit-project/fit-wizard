@@ -1,14 +1,25 @@
 {
-
+    "TITLE_RIGHT_INFO": "Freezing Internet Tool",
+    "VERIFY_TIMESTAMP_BUTTON": "Verify timestamp",
+    "VERIFY_PEC_BUTTON": "Verify PEC",
+    "cONFIGURATION_BUTTON" : "Configuration",
     "INSERT_UPDATE_CASE_INFO": "Case information",
     "INSERT_UPDATE_CASE_INFO_ERR" :"Insert/Update case information is not possible.",
+    "NAME": "Customer/Case",
+    "LAWYER": "Lawyer",
+    "OPERATOR": "Operator",
+    "PROCEEDING_TYPE": "Proceeding Type",
+    "COURTHOUSE": "Courthouse",
+    "PROCEEDING_NUMBER": "Proceeding Number",
+    "LOGO": "Select Logo",
+    "NOTES": "Note",
     "PROJECT_NAME": "FIT",
     "CASE_SUMMARY": "Case summary",
     "TASK_WEB": "WEB",
     "TASK_MAIL": "MAIL",
     "TASK_INSTAGRAM": "INSTAGRAM",
     "TASK_VIDEO": "VIDEO",
-    "TASK_VERIFY_TIMESTAMP": "VERIFY TIMESTAMP",
-    "TASK_VERIFY_PEC": "VERIFY PEC",
+    "BACK_BUTTON": "< Back",
+    "NEXT_BUTTON": "Next >",
     "TASK_ENTIRE_WEBSITE": "ENTIRE WEBSITE"
 }
