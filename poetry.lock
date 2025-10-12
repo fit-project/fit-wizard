@@ -468,7 +468,7 @@ xhtml2pdf = "^0.2.17"
 type = "git"
 url = "https://github.com/fit-project/fit-verify-pdf-timestamp.git"
 reference = "main"
-resolved_reference = "4ab4ab52bd9a44b015c05c2bc1affa21c8d48f5f"
+resolved_reference = "4540e13541c8f8f85dca03f9d84e7736748f6f71"
 
 [[package]]
 name = "fit-verify-pec"
@@ -493,7 +493,7 @@ xhtml2pdf = "^0.2.17"
 type = "git"
 url = "https://github.com/fit-project/fit-verify-pec.git"
 reference = "main"
-resolved_reference = "a3fe0e568ac7f068257c9dd8930aab0815a05f46"
+resolved_reference = "c7eb18f5a6d2af3c104b633ebfc6e827876c10ec"
 
 [[package]]
 name = "freetype-py"
@@ -2086,5 +2086,5 @@ test = ["coverage (>=5.3)", "tomli (>=2.0.1) ; python_version < \"3.11\"", "tox"
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">3.11,<3.13"
-content-hash = "3967e89367c47b61d1e2aaa6913619276c7adda86c34ca2a62e38e37da764470"
+python-versions = ">=3.11,<3.13"
+content-hash = "17d5177c39bbbb926e472667037192d5a4681f58a7c803e71febc0d4e00286d1"

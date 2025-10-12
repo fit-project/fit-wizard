@@ -22,7 +22,7 @@ from fit_verify_pdf_timestamp.view.verify_pdf_timestamp import (
 from fit_configurations.utils import show_configuration_dialog
 from fit_cases.utils import show_case_info_dialog
 
-from fit_common.core.utils import get_version
+from fit_common.core import get_version
 
 from fit_wizard.lang import load_translations
 
@@ -84,7 +84,7 @@ class Wizard(QtWidgets.QMainWindow):
         self.ui.back_button.hide()
 
         # SET VERSION
-        self.ui.version.setText(get_version())
+        self.ui.version.setText(f"v{get_version()}")
 
         # PAGE1 CASE INFO FORM
         self.form_manager = CaseFormManager(self.ui.form)

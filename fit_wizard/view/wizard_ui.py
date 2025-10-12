@@ -10,7 +10,7 @@
 from PySide6 import QtCore, QtGui, QtWidgets
 
 from fit_wizard.lang import load_translations
-from fit_common.core.utils import get_version
+from fit_common.core import get_version
 
 
 class Ui_fit_wizard(object):
@@ -932,4 +932,4 @@ class Ui_fit_wizard(object):
         self.back_button.setText(self.translations["BACK_BUTTON"])
         self.next_button.setText(self.translations["NEXT_BUTTON"])
         self.credits_label.setText("By: fit-project.org")
-        self.version.setText(get_version())
+        self.version.setText(f"v{get_version()}")
