@@ -14,15 +14,15 @@ from fit_wizard.view.wizard import Wizard
 
 
 def main():
-    def start_task(task, case_info):
-        print(f"task: {task}")
-        print(f"case_info: {case_info}")
-        window.close()
+    def start_task():
+        print(f"task: {wizard.selcted_task}")
+        print(f"case_info: {wizard.case_info}")
+        wizard.close()
 
     app = QApplication(sys.argv)
-    window = Wizard()
-    window.finished.connect(lambda task, case_info: start_task(task, case_info))
-    window.show()
+    wizard = Wizard()
+    wizard.finished.connect(start_task)
+    wizard.show()
     sys.exit(app.exec())
 
 

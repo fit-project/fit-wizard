@@ -30,11 +30,9 @@ from fit_wizard.view.wizard_ui import (
     Ui_fit_wizard,
 )
 
-from fit_assets import resources
-
 
 class Wizard(QtWidgets.QMainWindow):
-    finished = QtCore.Signal(str, dict)
+    finished = QtCore.Signal()
 
     def __init__(self, parent=None):
         super(Wizard, self).__init__(parent)
@@ -189,5 +187,5 @@ class Wizard(QtWidgets.QMainWindow):
             error_dlg.exec()
 
         # Send signal to main loop to start the acquisition window
-        self.finished.emit(self.selcted_task, self.case_info)
+        self.finished.emit()
         self.hide()
