@@ -10,12 +10,12 @@ packages = [
 
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.13"
+python = ">=3.11,<3.14"
 PySide6 = "6.9.0"
 
 
-fit-verify-pdf-timestamp= {git = "https://github.com/fit-project/fit-verify-pdf-timestamp.git", rev = "main"}
-fit-verify-pec = {git = "https://github.com/fit-project/fit-verify-pec.git", rev = "main"}
+fit-verify-pdf-timestamp= {git = "https://github.com/fit-project/fit-verify-pdf-timestamp.git", branch = "chore/update-python-compatibility-3.13"}
+fit-verify-pec = {git = "https://github.com/fit-project/fit-verify-pec.git", branch = "chore/update-python-compatibility-3.13"}
 
 
 
