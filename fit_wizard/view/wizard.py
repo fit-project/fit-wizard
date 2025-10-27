@@ -95,6 +95,9 @@ class Wizard(QtWidgets.QMainWindow):
             task.setAttribute(QtCore.Qt.WidgetAttribute.WA_MacShowFocusRect, 0)
             task.clicked.connect(self.__task_clicked)
 
+        # HIDE INSTAGRAM TASK
+        self.ui.frame_instagram.hide()
+
         # SUMMARY BUTTON
         self.ui.case_summary_button.clicked.connect(show_case_info_dialog)
         self.ui.case_summary_button.hide()

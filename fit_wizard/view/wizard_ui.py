@@ -617,36 +617,6 @@ class Ui_fit_wizard(object):
         self.mail.setObjectName("mail")
         self.vlayout_mail.addWidget(self.mail)
         self.tasks_row_1.addWidget(self.frame_mail)
-        self.frame_instagram = QtWidgets.QFrame(parent=self.horizontalLayoutWidget)
-        self.frame_instagram.setMinimumSize(QtCore.QSize(160, 0))
-        self.frame_instagram.setMaximumSize(QtCore.QSize(160, 100))
-        self.frame_instagram.setFrameShape(QtWidgets.QFrame.Shape.Box)
-        self.frame_instagram.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
-        self.frame_instagram.setObjectName("frame_instagram")
-        self.verticalLayoutWidget_14 = QtWidgets.QWidget(parent=self.frame_instagram)
-        self.verticalLayoutWidget_14.setGeometry(QtCore.QRect(0, 0, 161, 101))
-        self.verticalLayoutWidget_14.setMinimumSize(QtCore.QSize(161, 0))
-        self.verticalLayoutWidget_14.setMaximumSize(QtCore.QSize(161, 101))
-        self.verticalLayoutWidget_14.setObjectName("verticalLayoutWidget_14")
-        self.vlayout_instagram = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_14)
-        self.vlayout_instagram.setContentsMargins(5, 0, 0, 10)
-        self.vlayout_instagram.setObjectName("vlayout_instagram")
-        self.label_instagram = QtWidgets.QLabel(parent=self.verticalLayoutWidget_14)
-        self.label_instagram.setMinimumSize(QtCore.QSize(155, 0))
-        self.label_instagram.setMaximumSize(QtCore.QSize(155, 68))
-        self.label_instagram.setText("")
-        self.label_instagram.setPixmap(
-            QtGui.QPixmap(":/images/wizard/images/wizard/instagram.png")
-        )
-        self.label_instagram.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_instagram.setObjectName("label_instagram")
-        self.vlayout_instagram.addWidget(self.label_instagram)
-        self.instagram = QtWidgets.QCheckBox(parent=self.verticalLayoutWidget_14)
-        self.instagram.setMaximumSize(QtCore.QSize(150, 16777215))
-        self.instagram.setChecked(False)
-        self.instagram.setObjectName("instagram")
-        self.vlayout_instagram.addWidget(self.instagram)
-        self.tasks_row_1.addWidget(self.frame_instagram)
         self.frame_video = QtWidgets.QFrame(parent=self.horizontalLayoutWidget)
         self.frame_video.setMinimumSize(QtCore.QSize(160, 0))
         self.frame_video.setMaximumSize(QtCore.QSize(160, 100))
@@ -677,33 +647,7 @@ class Ui_fit_wizard(object):
         self.video.setObjectName("video")
         self.vlayout_video.addWidget(self.video)
         self.tasks_row_1.addWidget(self.frame_video)
-        spacerItem3 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Fixed,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
-        self.tasks_row_1.addItem(spacerItem3)
-        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(parent=self.tasks_container)
-        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(0, 120, 751, 111))
-        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
-        self.tasks_row_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
-        self.tasks_row_2.setSizeConstraint(
-            QtWidgets.QLayout.SizeConstraint.SetDefaultConstraint
-        )
-        self.tasks_row_2.setContentsMargins(0, 0, 0, 10)
-        self.tasks_row_2.setSpacing(10)
-        self.tasks_row_2.setObjectName("tasks_row_2")
-        spacerItem4 = QtWidgets.QSpacerItem(
-            5,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
-        self.tasks_row_2.addItem(spacerItem4)
-        self.frame_entire_website = QtWidgets.QFrame(
-            parent=self.horizontalLayoutWidget_2
-        )
+        self.frame_entire_website = QtWidgets.QFrame(parent=self.horizontalLayoutWidget)
         self.frame_entire_website.setMinimumSize(QtCore.QSize(160, 0))
         self.frame_entire_website.setMaximumSize(QtCore.QSize(160, 100))
         self.frame_entire_website.setFrameShape(QtWidgets.QFrame.Shape.Box)
@@ -738,7 +682,61 @@ class Ui_fit_wizard(object):
         self.entire_website.setChecked(False)
         self.entire_website.setObjectName("entire_website")
         self.vlayout_entire_website.addWidget(self.entire_website)
-        self.tasks_row_2.addWidget(self.frame_entire_website)
+        self.tasks_row_1.addWidget(self.frame_entire_website)
+        spacerItem3 = QtWidgets.QSpacerItem(
+            40,
+            20,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+            QtWidgets.QSizePolicy.Policy.Minimum,
+        )
+        self.tasks_row_1.addItem(spacerItem3)
+        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(parent=self.tasks_container)
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(0, 120, 751, 111))
+        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
+        self.tasks_row_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
+        self.tasks_row_2.setSizeConstraint(
+            QtWidgets.QLayout.SizeConstraint.SetDefaultConstraint
+        )
+        self.tasks_row_2.setContentsMargins(0, 0, 0, 10)
+        self.tasks_row_2.setSpacing(10)
+        self.tasks_row_2.setObjectName("tasks_row_2")
+        spacerItem4 = QtWidgets.QSpacerItem(
+            5,
+            20,
+            QtWidgets.QSizePolicy.Policy.Expanding,
+            QtWidgets.QSizePolicy.Policy.Minimum,
+        )
+        self.tasks_row_2.addItem(spacerItem4)
+        self.frame_instagram = QtWidgets.QFrame(parent=self.horizontalLayoutWidget_2)
+        self.frame_instagram.setMinimumSize(QtCore.QSize(160, 0))
+        self.frame_instagram.setMaximumSize(QtCore.QSize(160, 100))
+        self.frame_instagram.setFrameShape(QtWidgets.QFrame.Shape.Box)
+        self.frame_instagram.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
+        self.frame_instagram.setObjectName("frame_instagram")
+        self.verticalLayoutWidget_14 = QtWidgets.QWidget(parent=self.frame_instagram)
+        self.verticalLayoutWidget_14.setGeometry(QtCore.QRect(0, 0, 161, 101))
+        self.verticalLayoutWidget_14.setMinimumSize(QtCore.QSize(161, 0))
+        self.verticalLayoutWidget_14.setMaximumSize(QtCore.QSize(161, 101))
+        self.verticalLayoutWidget_14.setObjectName("verticalLayoutWidget_14")
+        self.vlayout_instagram = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_14)
+        self.vlayout_instagram.setContentsMargins(5, 0, 0, 10)
+        self.vlayout_instagram.setObjectName("vlayout_instagram")
+        self.label_instagram = QtWidgets.QLabel(parent=self.verticalLayoutWidget_14)
+        self.label_instagram.setMinimumSize(QtCore.QSize(155, 0))
+        self.label_instagram.setMaximumSize(QtCore.QSize(155, 68))
+        self.label_instagram.setText("")
+        self.label_instagram.setPixmap(
+            QtGui.QPixmap(":/images/wizard/images/wizard/instagram.png")
+        )
+        self.label_instagram.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_instagram.setObjectName("label_instagram")
+        self.vlayout_instagram.addWidget(self.label_instagram)
+        self.instagram = QtWidgets.QCheckBox(parent=self.verticalLayoutWidget_14)
+        self.instagram.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.instagram.setChecked(False)
+        self.instagram.setObjectName("instagram")
+        self.vlayout_instagram.addWidget(self.instagram)
+        self.tasks_row_2.addWidget(self.frame_instagram)
         spacerItem5 = QtWidgets.QSpacerItem(
             550,
             20,
